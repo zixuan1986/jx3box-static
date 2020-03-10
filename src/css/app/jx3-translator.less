@@ -1,0 +1,55 @@
+@import '../include/base.less';
+@import '../include/var.less';
+@import '../widget/ui.less';
+@import '../widget/icon.less';
+
+.u-btn-publish{
+    i{
+        .size(16px);
+    }
+}
+
+.m-jx3-translator{
+    height:600px;
+    
+    textarea{
+        .u-form-text;
+        .h(100%);
+        .w(45%);
+    }
+    .u-cn{
+        .fl;
+    }
+    .u-tr{
+        .fr;
+    }
+
+    .pr;
+    .u-btn-publish{
+        .db;
+        .pa;
+        top:50%;
+        left:50%;
+        transform:translateX(-50%) translateY(-50%);
+        .x;
+    }
+}
+
+@media screen and (max-width:@ipad-y){
+    .m-jx3-translator {
+        .h(auto);
+        textarea{
+            .h(300px);
+        }
+        .u-cn,.u-tr{
+            float:none;
+            .w(100%);
+        }
+        .u-btn-publish{
+            .ps;
+            .w(100%);
+            transform:none;
+            margin:10px auto;
+        }
+    }
+}

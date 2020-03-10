@@ -1,0 +1,661 @@
+/*
+ * @Description: 单页公共样式
+ * @Template : single-*.php
+ * @Author: iRuxu
+ * @Date: 2019-08-31 19:07:38
+ * @LastEditors: iRuxu
+ * @LastEditTime: 2019-09-13 09:00:17
+ */
+
+.p-single{
+}
+
+//头部
+.m-single-header{
+    margin-bottom:24px;
+}
+
+.m-single-header-inner{
+    color:@color-gray;
+    .u-sub-block{.dbi;.y(top);}
+    .pr;
+}
+
+.m-single-header-primary{
+    .fz(18px,22px);
+    padding:1px 0;
+
+    max-width:100%;
+    white-space: nowrap;
+    overflow: hidden;
+    .mr(250px);
+
+    .u-sub-block{
+        //.dbi;.y(top);
+    }
+    .u-cicon{
+        .size(24px);
+        margin-right:5px;
+    }
+    .u-route,.u-name,.u-title{
+        &:hover{box-shadow:0 1px 0 @color-link;}
+    }
+    .u-author{
+        .pr;
+    }
+    .u-card{
+        .z(100);
+    }
+    .u-title{
+        //.nobreak;
+        text-overflow:ellipsis;
+    }
+    .u-rec{
+        .fz(12px);
+        padding:1px 5px 2px 5px;
+        .ml(5px);
+        .r(2px);
+        background-color:#6f42c1;
+        color:#fff;
+        &:before{
+            .fz(14px);
+        }
+        .pr;top:-2px;
+    }
+}
+
+@media screen and (max-width:@ipad){
+    .m-single-header-primary{
+        .fz(1rem);
+        .mr(0);
+        white-space: normal;
+
+        .u-route,.u-author,.u-hr,.u-title{.di;}
+        .u-rec{
+            .none;
+        }
+    }
+}
+
+.m-single-header-meta{
+    margin-top:10px;
+    .clearfix;
+    .h(24px);
+    .fz(13px,24px);
+
+    .u-sub-block{
+        .mr(10px);
+    }
+
+    .u-author,.u-route{
+        i{.u-icon;.size(16px);}
+        a{
+            .pr;top:1px;
+        }
+        a:hover{box-shadow:0 1px 0 @color-link;}
+    }
+
+    .u-modate,.u-podate,.u-views{
+        cursor:default;
+        i{
+            .u-icon;
+            .size(16px);
+            float:none;
+        }
+    }
+    .u-modate{
+        i{.mr(3px);}
+        //.mr(0);
+    }
+    .u-podate{
+
+    }
+
+    .u-views{
+        i{.y(-3px);}
+    }
+
+    .u-edit{
+        .fr;
+        color:#fff;
+        &:before{
+            content:'';
+            .u-icon-edit-white;
+            .size(14px);
+            .u-icon;
+            .y(-3px);
+            .mr(2px);
+        }
+        .u-btn-publish;
+        .pr;top:-2px;
+    }
+    .u-admin{
+        .fr;
+        .u-btn-white;
+        margin-top: -2px;
+        margin-right: 5px;
+        .h(29px);
+        .normal;
+        i{
+            .u-icon;
+            .y(-4px);
+            .size(16px);
+            .mr(5px);
+            background-image:url('@{url}widget/gear.svg');
+        }
+    }
+}
+@media screen and (max-width:@phone){
+    .m-single-header-meta{
+        .u-admin,.u-edit,.u-views{
+            .none;
+        }
+        .u-modate{
+            .mr(0);
+        }
+        .u-podate{
+            .none;
+        }
+    }
+}
+
+.m-single-header-panel{
+    .pa;.rt(10px,0);
+    .clearfix;
+    .w-share{
+        .fl;
+        .mr(10px);
+    }
+    .w-fav{
+        .fl;
+    }
+}
+@media screen and (max-width:@phone){
+    .m-single-header-panel{
+        .none;
+    }
+}
+//管理员面板
+.c-dialog-rec{
+    //.db !important;
+    .size(540px,400px);
+    .ct(o,540px,400px);
+    /* .pf;left:50%;top:50%;
+    transform:translate3d(-50%,-50%,0); */
+    padding-bottom:20px;
+
+    .u-mode{
+        border-bottom:1px solid #eee;
+        font-weight:300;
+        .lh(2);
+        .mb(10px);
+    }
+
+    .u-block{
+        .mb(10px);
+    }
+
+    .u-rec-list,.u-status-list{
+        list-style:none;
+        .clearfix;
+
+        li{
+            .db;.fl;.mr(15px);
+            .pointer;border:1px solid #ddd;
+            .r(4px);padding:0 5px;
+            .fz(14px);
+            background-color:@bg-light;
+            &:hover{border-color:@border-hover;}
+            &.active{background-color:#fff;border-color:@border-active;}
+            .mb(10px);
+        }
+
+        .draft.active{
+            border-color:#f5914c;
+            color:#f5914c;
+        }
+        .delete.active{
+            border-color:#ff0000;
+            color:#ff0000;
+        }
+    }
+
+
+    .u-rec-item{
+        .fz(14px);
+        label{font-weight:normal;.lh(2);}
+        input,textarea{
+            .u-form-text;
+            .tip(font-size,13px);
+            .tip(color,#888);
+        }
+        textarea{
+            .h(80px);
+        }
+    }
+
+    .u-highlight-list{
+        .clearfix;
+        li{
+            .db;
+            .size(24px);
+            .fl;
+            .pointer;
+            .mr(5px);
+            &.active{border:2px solid @border-active;}
+        }
+        .u-null{
+            border:1px solid #eee;
+        }
+    }
+
+}
+
+//主体框架
+.m-single-content{
+    .pb(20px);
+}
+
+//扩展字段
+.m-single-extend{
+    .mb(20px);
+
+    li{
+        .lh(32px);
+        .mb(10px);
+        list-style:none;
+        .u-label{
+            .mr(10px);
+            //.dbi;.y(top);
+            min-width:40px;
+            background-color:@bg-gray;
+            padding:0 10px;
+            .r(4px);
+            .fl;
+        }
+        .u-value{
+            .bold;
+            //.dbi;.y(top);
+            //.fl;
+        }
+        .clearfix;
+        .u-btn-down{
+            .u-btn-publish;
+        }
+    }
+}
+
+//翻页
+.m-single-pages{
+    .mt(10px);
+}
+
+//内容为空
+.m-single-null{
+    padding-bottom:100px;
+    .x;
+    p{.db;.u-msg-yellow;}
+    a{
+        .dbi;
+        .fz(14px,2);
+        .r(4px);
+        .u-btn-white;
+        .mt(10px);
+        box-shadow:none;
+        padding:10px 20px;
+    }
+}
+
+.m-single-footer{
+    //padding-top:20px;
+    padding-bottom:20px;
+}
+
+//作者作品
+.m-single-footer-related{
+
+    .mb(30px);
+
+    .u-label{
+        //border-bottom: 2px solid #2E97DE;
+        font-size:0;
+        a{
+            .dbi;.y;
+            background-color:#fff;
+            .pr;
+        }
+        .u-avatar{
+            .r(3px);
+            img{
+                .size(35px);
+                .db;
+                //box-shadow:0 0 3px rgba(0,0,0,.2);
+                //border:1px solid #ddd;
+            }
+            padding-right:3px;
+            &:hover{
+                border-color: #ddd;
+            }
+        }
+        .u-name{
+            //.fz(18px,2.5);
+            //font-weight:300;
+            //background-color: #2E97DE;
+            //color: #fff;
+            .dbi;
+            //.bold;
+            .fz(14px,35px);
+
+            //background-color: #f6f8fa;
+            .r(4px);
+
+            text-align: center;
+            display: inline-block;
+            padding: 0 10px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            user-select: none;
+            .color(#555,@color-link);
+            .bold;
+
+            .pr;
+        }
+        &:before{
+            content:'';
+            .db;
+            border-bottom:1px dashed #ddd;
+            .pr;
+            top:20px;
+        }
+        .mb(10px);
+    }
+
+    li{
+        list-style:none;
+        color:#888;
+        .fz(14px,2);
+        .pr;
+
+        .pr(100px);
+        .nobreak;
+        padding-left:2px;
+
+        a{
+            .underline;
+        }
+    }
+    .u-icon{
+        .size(16px);
+    }
+    .u-time{
+        .pa;.rt(0);
+    }
+    .u-type{
+        color:#666;
+        .underline(#666);
+    }
+}
+
+.m-single-interact{
+    .x;
+    .w-fav,.w-share{
+        .dbi;.y(top);
+    }
+    .w-share{
+        .mr(10px);
+    }
+    margin-top:20px;
+
+    .none;
+}
+@media screen and (max-width:@phone){
+    .m-single-interact{
+        .db;
+    }
+}
+
+//作者操作面板
+.m-single-footer-authorpanel{
+
+    .u-label{
+        .pr;
+        .fz(14px);.bold;
+        .mb(10px);
+        /* &:after{
+            content:'';
+            .db;
+            .size(100%,1px);
+            background-color:#ddd;
+            .pa;.lt(0,50%);
+        } */
+    }
+
+    .mb(20px);
+    padding:20px;
+    background-color:@bg-light;
+    border:1px solid #ddd;
+    .r(4px);
+    
+    li{
+        .dbi;.y(top);
+    }
+    .u-edit{
+        .u-btn-edit;
+    }
+    .w-copy{
+        
+    }
+    .u-longpic{
+        .u-btn-white;
+        .u-icon{
+            .size(14px);
+            vertical-align: -3px;
+            margin-right: 3px;
+        }
+    }
+}
+
+//版权声明
+.m-single-copyright{
+    background-color:@bg-light;
+    .x;
+    padding:10px;
+    .r(4px);
+    margin:20px auto;
+    border:1px solid #eee;
+
+    span{
+        .fz(12px,2);
+        color:#999;
+    }
+    .none;
+}
+
+//目录树
+.m-single-content-inner{
+    .pr;
+}
+//在左侧时
+.m-single-directory{
+    .none;
+    border:1px solid #ddd;
+    .pf;.z(20);
+    transform:translateX(-100%);
+    //position: sticky;
+    .lt(-30px,0);
+    //top:80px;
+    //right:0;
+    //.fr;
+    //.pa;.rt(0);
+    transition:0.2s ease-in-out;
+
+    max-height:calc(100% - 200px - 40px);
+    overflow-y:auto;
+    &::-webkit-scrollbar{
+        background-color: #fff;
+        .w(4px);
+    }//整体部分
+    &::-webkit-scrollbar-track{
+        background-color: #fafafa;
+    }//轨道
+    &::-webkit-scrollbar-track-piece{
+        background-color: #fafafa;
+    }//内层轨道
+    &::-webkit-scrollbar-thumb{
+        background-color: #eee;
+        .r(4px);
+    }//滚动条滑块
+    &::-webkit-scrollbar-button{
+        .none;
+    }//两侧按钮
+    &::-webkit-scrollbar-corner{
+        .none;
+    }//边角（横纵滚动条的交汇处）
+    &::-webkit-resizer{
+        .none;
+    }//边角拖拽控件
+
+    .w(190px);
+    .r(3px);
+    padding:15px;
+    background-color:@bg-light;
+    font-weight:500;
+    h1,h2,h3{
+        .pointer;
+        .x(left);
+    }
+
+    .u-title{
+        .bold;
+        .mb(10px);
+        user-select: none;
+
+        .u-nav{
+            .pointer;
+            &:hover{
+                color:orange;
+            }
+            .u-txt{
+                .bold;
+            }
+        }
+        .u-icon{
+            background:url('@{url}dashboard/directory.svg') no-repeat center center;
+            .size(14px);
+            margin-right: 5px;
+            vertical-align: -2px;
+        }
+        .u-top{
+            .pointer;
+            .fr;
+            color:#888;
+            .fz(12px,20px);
+            .normal;
+            &:hover{
+                color:#c00;
+            }
+        }
+    }
+    .u-pages{
+        a{
+            .db;
+            .fz(14px,1.8);
+            &:before{
+                content:"";
+                .size(14px);
+                background:url('@{url}widget/file.svg') no-repeat center center;
+                background-size:contain;
+                .u-icon;
+                .mr(3px);
+                .y(-3px);
+            }
+        }
+    }
+
+    .u-hr{
+        .none;
+        margin:10px 0;
+    }
+
+    .u-pages a,h1,h2,h3{
+        color:@color-link;
+        &:hover{
+            color:#c00;
+            text-decoration:underline;
+        }
+        .nobreak;
+        letter-spacing:0.5px;
+    }
+    h1,h2{
+        //.pr;
+        //padding-left:12px;
+        &.hasChild{
+            color:#444;
+            &:before{
+                //.pa;.lt(0);
+                content:'';
+                background:url('@{url}editor/arrow.svg') no-repeat 0 0;
+                background-size:contain;
+                .size(8px);
+                .dbi;
+                transform:rotate(90deg);
+                .mr(5px);
+                //transform-origin:0 0;
+            }
+        }
+    }
+
+    h1{
+        .fz(14px,1.8);
+        font-weight:400;
+        //.mt(10px);
+        .bold;
+        .mt(5px);
+    }
+    h2{
+        .fz(13px,2);
+        //.mt(5px);
+        .indent(20px);
+    }
+    h3{
+        .fz(12px,2.2);
+        //.mt(5px);
+        .indent(40px);
+    }
+
+    &.isHidden{
+        left:0 !important;
+        height: 50px;
+        width: 50px;
+        overflow: hidden;
+        transform: translate(0) !important;
+
+        .pointer;
+
+        padding:0;
+        .u-txt,.u-top,h1,h2,h3,.u-pages,.u-hr{
+            .none !important;
+        }
+        .u-nav{
+            .db;
+            padding:13px 14px 14px 16px;
+        }
+    }
+
+}
+//在右侧时
+@media screen and (max-width:1600px){
+    #m-single-directory{
+        left:auto !important;
+        transform:translate(0) !important;
+
+        &.isHidden{
+            right:0 !important;
+        }
+    }
+}
+@media screen and (max-width:@phone){
+    .m-single-directory{
+        .none !important;
+    }
+}

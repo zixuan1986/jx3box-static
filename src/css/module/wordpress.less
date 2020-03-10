@@ -1,0 +1,52 @@
+/* 媒体上传弹窗 */
+body{
+    .media-frame-menu{
+        .none;
+    }
+    .media-frame-content,.media-frame-router,.media-frame-title,.media-frame-toolbar{
+        left:0;
+    }
+}
+
+.media-views-heading,.screen-reader-text{
+    display:none;
+}
+.wp-core-ui .attachment .thumbnail{
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+}
+
+//链接定义框
+#wp-link-wrap{
+    #link-modal-title{
+        .fz(15px);
+    }
+    #wplink-enter-url{
+        .fz(15px);.bold;color:#28a745;
+    }
+    #link-options{
+        label{
+            .db;.w(100%);
+            span{.fz(14px);}
+        }
+        .link-target{
+            .fz(13px);
+            color:@bg-blue;
+        }
+    }
+    #wplink-link-existing-content{
+        .fz(15px);.bold;color:@bg-or;
+    }
+    #search-panel{
+        .link-search-wrapper,.query-notice{
+            .none;
+        }
+    }
+    #wp-link .query-results{
+        top:160px;
+    }
+    #wp-link li{
+        .fz(13px);
+    }
+}

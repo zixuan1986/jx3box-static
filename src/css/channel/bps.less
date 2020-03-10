@@ -1,0 +1,152 @@
+@import '../include/base.less';
+@import '../include/var.less';
+
+//单页
+.m-single-extend{
+    .u-xf i{
+        .size(32px);
+        .y(top);
+    }
+} 
+
+//列表
+.m-bps-nav{
+}
+.u-nav-title{
+    .mt(10px);
+}
+@media screen and (max-width:@ipad){
+    #m-bps-nav{
+        .mb(10px);
+    }
+}
+.m-bps-header{
+    border-bottom:1px dashed #ddd;
+    .pr;
+    .mb(10px);
+}
+.m-bps-title{
+    .fz(22px);
+    padding-bottom:10px;
+    //font-weight:300;
+    .u-edit{.none;}
+}
+.x-admin .m-bps-title{
+    .u-edit{
+        .di;
+        .ml(10px);
+        .fz(14px);
+        .underline(@color-link);
+    }
+}
+.m-bps-author{
+    .pa;.rb(0,10px);
+    .fz(14px);
+    color:#999;
+    a{
+        .underline(@color-link);
+    }
+}
+.m-bps-index{
+    h4{
+        .bold;
+        border-left:5px solid @bg-blue;
+        padding:8px 10px;
+        background-color: @bg-light;
+    }
+
+    h5{
+        padding: 3px 5px;
+        .r(3px);
+        .fz(13px);
+        .bold;
+        //color:#28a745;
+        //background-color: #fff;
+        background:none;
+        //border: 1px solid #28a745;
+    }
+}
+.m-bps-info,.m-bps-overview{
+    .fz(14px,1.8);
+    .mb(20px);
+    background-color:@bg-light;
+    border:1px solid #eee;
+    padding:10px;
+    .r(4px);
+    ul{
+        padding-left:40px;
+    }
+    li{
+        //list-style:none;
+    }
+    strong{
+        .bold;
+    }
+    table{
+        /* margin:10px;
+        width: calc(100% - 20px) !important; */
+        td{
+            padding: 3px 8px;
+            .fz(12px);
+        }
+    }
+    p{
+        &:after{
+            .none;
+        }
+    }
+}
+.m-bps-skill{
+    padding:15px 10px;
+    .fz(12px);
+    color:#888;
+}
+.m-bps-list{
+    padding:10px;
+    li{
+        list-style:none;
+        border-bottom:1px dotted #ddd;
+        padding:5px 0;
+        .fz(14px);
+        padding-right:250px;
+        .pr;
+        .nobreak;
+    }
+    a:hover{
+        color:#a00;
+    }
+    .u-icon{
+        .size(16px);
+        .y(-4px);
+    }
+    .u-meta{
+        .fr;
+        .fz(12px);
+        .pa;.rb(0,7px);
+    }
+}
+@media screen and (max-width:@phone){
+    .m-bps-list{
+        li{
+            padding-right:0;
+        }
+        .u-meta{
+            .none;
+        }
+    }
+}
+.m-archive-null{
+    .mt(20px);
+}
+.m-bps-feature{
+    padding:10px 10px 0 10px;
+    .fz(14px,1.8);
+}
+.m-bps-subtitle{
+    .u-more{
+        .fr;
+        font-weight:normal;
+        .fz(13px);
+        .underline(@color-link);
+    }
+}

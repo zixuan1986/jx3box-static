@@ -1,0 +1,139 @@
+@import '../include/base.less';
+@import '../include/var.less';
+@import '../widget/ui.less';
+@import '../widget/icon.less';
+/* <!--<a class="u-btn u-btn-default" id="c-post-qx-default" href="#">加载预设奇穴方案</a>--> */
+//列表
+//================================
+.m-archive-nav{
+    .u-nav-title{
+        .mt(10px);
+    }
+}
+.m-macro-list{
+
+    .u-tag b{
+        .fz(13px);
+    }
+
+    .u-macro{
+        em{
+            &:after{
+                content:"／";
+                color:#999;
+                margin:0 3px 0 5px;
+            }
+            &:last-child{
+                &:after{.none;}
+            }
+        }
+    }
+
+}
+@media screen and (max-width:@ipad){
+    .m-macro-list .u-sub-meta{
+        .mt(5px);
+    }
+}
+
+//单页
+//================================
+.m-single-macro{
+    .m-single-extend{
+        .mb(40px);
+    }
+    .u-xf{
+        i{
+            .dbi;.y(top);.size(32px);
+            background-size:contain;
+        }
+    }
+    .u-qx{
+        .u-raw{.none;}
+    }
+}
+@media screen and (max-width:@ipad){
+    .m-single-jx3-qx .u-label{
+        .none;
+    }
+}
+.m-macro-box{
+    .pr;
+    .nav-tabs{padding-left: 41px;}
+    .nav-tabs li,.nav-tabs a{
+        user-select:none;
+        min-height:40px;
+    }
+
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+        background-color: @bg-light;
+        .bold;
+    }
+    .mb(40px);
+}
+.m-macro-code-data{
+    .none;
+}
+.m-macro-code-format{
+    font-family: Monaco,Consolas,'Lucida Console','Courier New',serif;
+    ol{
+        padding: 0 0 0 40px;
+        border-radius: 4px;
+        background: @bg-gray;
+        border: 1px solid #eee;
+        border-top:none;
+        border-top-left-radius:0;
+        border-top-right-radius:0;
+        border-color:#ddd;
+    }
+    li{
+        margin:0 !important;
+        background:#fafbfc;
+        border-bottom:1px solid @border-hr;
+        border-left:1px solid @border-hr;
+        &:last-child{border-bottom:none;}
+        list-style: decimal;
+        &:hover{
+            background-color:#fff;
+        }
+    }
+    pre{
+        background:none;
+        border:none;
+        padding:6px 10px !important;
+        margin:0;
+        .lh(24px);
+        border:none !important;
+    }
+    .preloader{
+        .none;
+    }
+}
+.m-macro-panel{
+    .pa;.rt(0,0);.z(1);
+}
+.m-macro-warning{
+    .u-msg-yellow;   
+}
+@media screen and (max-width:@ipad){
+    .m-single-macro .m-macro-panel{
+        margin-top:-30px;
+    }
+    .m-single-macro .m-macro-box .nav-tabs{
+        padding-left:0;
+
+        li > a{
+            padding:10px;
+        }
+    }
+}
+
+.m-error-browser{
+    .lh(1.6);
+    .u-msg-red;
+    strong{
+        .bold;
+    }
+    .mb(20px);
+    .none;
+}

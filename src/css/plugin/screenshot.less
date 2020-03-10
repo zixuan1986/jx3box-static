@@ -1,0 +1,137 @@
+@screen-width : 1242px;     //生成的长图
+html.w-screenshot-fixed{
+    overflow: hidden;
+}
+
+.w-screenshot-mask{
+    .pf;.lt(0);.z(900);
+    .full;
+    background-color:rgba(0,0,0,.4);
+    .none;
+}
+.w-screenshot-box{
+    .pf;.lt(50%,100px);.z(901);
+    .size(@screen-width + 40px,80%);
+    transform:translateX(-50%);
+
+    background-color:#fff;
+    .r(10px);
+    padding:20px;
+
+    .none;
+    .w-screenshot-msg{
+        .none;
+        .mb(20px);
+    }
+    .w-screenshot-loading{
+        padding:100px 0;
+        .u-icon-loading{
+            .size(32px);
+            .db;.auto(x);
+        }
+        span{.db;.x;.lh(3);}
+    }
+    .w-screenshot-success{
+        .u-msg-green;
+    }
+    .w-screenshot-failed{
+        .u-msg-red;
+    }
+
+    .w-screenshot-close{
+        .pa;.rt(-10px,10px);
+        transform:translateX(100%);
+        .u-icon;
+        //.u-icon-cancel;
+        .u-icon-close;
+        .size(40px);
+        .pointer;
+    }
+
+    .w-screenshot-img{
+        img{.auto(x);.db;}
+        overflow-y:auto;
+        max-height:640px;
+
+        &::-webkit-scrollbar{
+            background-color: #fff;
+            .w(4px);
+        }//整体部分
+        &::-webkit-scrollbar-track{
+            background-color: #fafafa;
+        }//轨道
+        &::-webkit-scrollbar-track-piece{
+            background-color: #fafafa;
+        }//内层轨道
+        &::-webkit-scrollbar-thumb{
+            background-color: #eee;
+            .r(4px);
+        }//滚动条滑块
+        &::-webkit-scrollbar-button{
+            .none;
+        }//两侧按钮
+        &::-webkit-scrollbar-corner{
+            .none;
+        }//边角（横纵滚动条的交汇处）
+        &::-webkit-resizer{
+            .none;
+        }//边角拖拽控件
+
+    }
+
+}
+@media screen and (max-width:767px){
+    .w-screenshot-box{
+        .w(100%);
+    }
+}
+
+//以下为业务定制
+//---------------------------------
+//生成长图时
+.s-cloneimg{
+    margin: 5px;
+    max-width:100%;
+    padding: 5px;
+    border: 1px solid #eee;
+
+    div{
+        background-repeat: no-repeat;
+        background-size:100% 100%;
+        .size(100%);
+    }
+}
+.w-screenshot-raw{
+    .w(@screen-width);
+    border:1px solid #e1e4e8;
+    //margin:20px 0;
+    padding-bottom:20px;
+
+    .m-single-header,.m-single-extend,.m-single-primary{
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .m-single-header-panel{
+        .none;
+    }
+    .m-single-header-meta{
+        .u-edit,.u-admin,.u-views{
+            .none;
+        }
+    }
+    .m-single-footer{
+        .none;
+    }
+
+    //宏栏目处理
+    .m-single-jx3-qx .u-label{.none;}
+    .w-qixue-box{
+        transform:scale(0.8);
+        transform-origin:0;
+    }
+    .m-macro-box{
+        margin:0 20px;
+        .m-macro-panel{.none;}
+    }
+
+}

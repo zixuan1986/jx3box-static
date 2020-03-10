@@ -1,0 +1,244 @@
+@import '../include/base.less';
+@import '../include/var.less';
+@import '../widget/ui.less';
+@import '../widget/icon.less';
+
+@media screen and (max-width:@phone){
+    .m-app-header-panel{
+        bottom:auto;
+        top:0;
+    }
+}
+
+@media screen and (max-width:@ipad-y){
+    .m-app-content{
+        .mt(10px);
+    }
+}
+
+.m-app-search{
+    margin-top:0;
+}
+
+.m-resource-tip{
+    .u-msg-blue;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 13px;
+    line-height: 2;
+    .r(4px);
+
+    b{.bold;}
+    a:hover{
+        .underline(@color-link);
+    }
+}
+
+.m-resource-list{
+    .mt(10px);
+
+    .u-null{
+        .x;
+        .u-msg-red;
+        .mt(10px);
+    }
+
+    .u-item{
+        .db;
+        border: 1px solid #eee;
+        background: #fafbfc;
+        margin-bottom: 10px;
+        padding: 5px 5px 5px 60px;
+        min-height:60px;
+        &:hover{
+            border-color:#34d058;
+        }
+        .pr;
+
+        &.u-raw{
+            padding:5px 5px 5px 10px;
+            .u-desc{
+                .lh(1.8);
+                em{color:#888;.mr(5px);}
+            }
+        }
+    }
+    .u-pic{
+        .db;
+        .pa;.lt(5px);
+        .size(48px);
+        .r(6px);
+        box-shadow: 0 0 1px inset rgba(0,0,0,.2);
+    }
+    .u-name{
+        .fz(14px,2);
+        .bold;
+        .db;
+    }
+    .u-desc{
+        .fz(13px,1.6);
+        .db;
+        white-space: pre-wrap;
+        .mb(3px);
+
+        em{
+            background-color:#eee;
+            padding:2px 5px;
+            margin:0 3px;
+            color:#888;
+            .r(3px);
+            .fz(12px);
+        }
+
+        sub{
+            font-size:100%;
+            .ps;
+        }
+    }
+    .u-remark{
+        .fz(12px,1.5);
+        color:#888;
+        .db;
+
+        em{
+            background-color:#eee;
+            padding:0 5px;
+            margin:0 3px;
+            color:#888;
+            .r(3px);
+        }
+    }
+    .u-id{
+        .fz(10px);
+        color:#555;
+        .pa;.rt(5px);
+    }
+}
+
+.m-app-selectgroup{
+    display: flex;
+    flex-flow: row;
+    select{
+        .u-form-text;
+        .pointer;
+    }
+    .u-zlp{
+        .w(25%);
+        .mr(5px);
+    }
+    .u-fb{
+        .w(30%);
+        .mr(5px);
+    }
+}
+
+@media screen and (max-width:@ipad-y){
+    .m-app-selectgroup{
+        select{
+            .w(33%) !important;
+        }
+    }
+}
+
+#m-unpack-list{
+    li{
+        padding:10px 10px 10px 70px;
+        &:hover{
+            .pointer;
+        }
+    }
+    .u-pic{
+        .lt(10px);
+    }
+    .u-name{
+        .fz(14px,24px);
+        em{
+            color:#888;
+            .fz(12px);
+            .normal;
+        }
+    }
+    .u-unpack{
+
+        .db;
+
+        em{
+            background-color:#eee;
+            padding:2px 5px;
+            margin:0 3px;
+            color:#777;
+            .r(3px);
+            .fz(12px);
+            .mr(5px);
+        }
+
+        .fz(12px,2);
+        b{color:#555;}
+        strong{.bold;padding:0 2px;word-break:break-all;}
+        small{color:#999;padding:0 5px;}
+    }
+    .u-subitem{
+        &:after{
+            content:"／";
+            color:#888;
+        }
+        &:last-child{
+            &:after{
+                .none;
+            }
+        }
+    }
+    .u-buff{
+        img{.size(24px);.r(3px);.y;.mr(2px);}
+    }
+    .u-view{
+        .pa;.rt(10px);
+        .pointer;
+        .fz(12px);
+        padding:0 5px;
+        .r(3px);
+        background-color:@bg-black;
+        border:1px solid @bg-black;
+        color:#eee;
+        user-select: none;
+    }
+    .u-raw{
+        .mt(5px);
+        .db;
+        .fz(12px,2);
+        padding:5px 10px;
+        .r(2px);
+        border:1px solid #eee;
+        background-color:#fff;
+        .none;
+    }
+    .on{
+        .u-raw{
+            .db;
+        }
+        .u-view{
+            color: #222;
+            background: #fff;
+            border: 1px solid #eee;
+        }
+    }
+    .u-raw-line{
+        .db;
+        em{color:#999;}
+        word-break:break-all;
+    }
+}
+@media screen and (max-width:@ipad){
+    #m-unpack-list{
+        .u-view{
+            .ps;
+            .mt(5px);
+        }
+        .u-buff img{
+            .size(20px);
+        }
+    }
+    #m-unpack-tip{
+        .none;
+    }
+}

@@ -1,0 +1,267 @@
+//附件按钮
+.wp-editor-tools .wp-media-buttons .add_media{
+    .u-btn-white;
+    box-shadow:none;
+    .dbi;.y(top);
+    .mb(0);
+    .mr(0);
+    .h(29px);
+    letter-spacing:0.5px;
+    box-sizing:border-box;
+
+    .wp-media-buttons-icon{
+        .u-icon;
+        .u-icon-attachment;
+        .size(14px);
+        &:before{.none;}
+    }
+}
+
+//左侧扩展按钮：宏、奇穴
+.e-extend-button{
+    .u-btn-white;
+    .dbi;
+    i{.size(16px);.y(-4px);.mr(5px);}
+    .mr(4px);
+}
+.e-extend-button-jx3{
+    .e-extend-button;
+}
+
+//右侧按钮
+.e-editor-help{
+    float:right;
+    box-sizing: content-box;
+    position: relative;
+    background: #ebebeb;
+    color: #666;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 19px;
+    height: 20px;
+    padding: 3px 8px 4px;
+    border: 1px solid #e5e5e5;
+    background: #ebebeb;
+    color: #555;
+    .tm(0.6);
+    &:hover{
+        .tm(1);
+    }
+}
+@media screen and (max-width:@ipad){
+    .e-extend-button,.e-editor-help{.none;}
+}
+
+
+//插入宏弹窗
+.c-dialog-macro{
+    .size(580px,320px);
+    .ct(o,580px,320px);
+
+    textarea{
+        .u-form-text;
+        .size(100%,200px);
+        padding:10px;
+        box-sizing:border-box;
+    }
+}
+//奇穴方案弹窗
+.c-dialog-qixue{
+    .size(580px,180px);
+    .ct(o,580px,180px);
+    p{
+        .x;
+        .fz(14px);
+        padding:5px;
+        a{.bold;padding:0 3px;box-shadow:0 1px 0 @color-link;}
+    }
+    input{
+        .u-form-text;
+        box-sizing: border-box;
+    }
+}
+//插入代码弹窗
+.c-dialog-code{
+    .size(580px,350px);
+    .ct(o,580px,350px);
+
+    .syntax-label{
+        .db;
+        .fl;
+        .lh(36px);
+    }
+
+    #syntax-grammar{
+        .u-form-text;
+        .pointer;
+        .db;
+        .w(460px);
+        .fr;
+        .mb(10px);
+    }
+
+    #syntax-code{
+        .u-form-text;
+        .size(100%,200px);
+        padding:10px;
+        box-sizing:border-box;
+    }
+}
+
+//插入剑三资源
+.c-dialog-jx3{
+    //.db !important;
+    .size(680px,430px);
+    .ct(o,680px,430px);
+
+    .u-title{
+        cursor: move;
+    }
+
+    .c-dialog-jx3-nav{
+        .clearfix;
+        border-bottom: 1px solid #dddddd;
+        li{
+            list-style:none;
+            .mr(6px);
+            line-height: 1.42857143;
+            border: 1px solid transparent;
+            border-radius: 4px 4px 0 0;
+            .fl;
+            padding:10px 15px;
+            color:@color-link;
+            .pointer;
+        }
+        .active{
+            color: #555555;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-bottom-color: transparent;
+        }
+    }
+
+    .u-tip{
+        .fz(14px,2);
+        b{.bold;}
+        span{
+            color:#666;
+        }
+        .u-msg-blue;
+        margin: 10px auto;
+        padding: 5px 10px;
+        a:hover{
+            .underline(@color-link);
+        }
+    }
+
+    .u-tip-loading{
+        .x;
+        color:#888;
+        .fz(14px);
+        padding:20px 0;
+    }
+    
+    .u-jx3-resource{
+        .u-form-text;
+    }
+
+    .u-jx3-resource-list{
+        .mt(10px);
+        .h(176px);
+        overflow-y:auto;
+        .u-null{
+            .x;
+            .u-msg-red;
+            .mt(10px);
+        }
+        .u-item{
+            .db;
+            .clearfix;
+            border: 1px solid #eee;
+            background: #fafafa;
+            margin-bottom: 10px;
+            padding: 5px 5px 5px 60px;
+            min-height:60px;
+            .pointer;
+            &:hover{
+                border-color:@border-hover;
+            }
+
+            &.on{
+                border-color:#34d058;
+            }
+            .pr;
+        }
+        .u-pic{
+            .db;
+            .pa;.lt(5px);
+            .size(48px);
+            .r(6px);
+            box-shadow: 0 0 1px inset rgba(0,0,0,.2);
+        }
+        .u-name{
+            .fz(14px,2);
+            .bold;
+            .db;
+        }
+        .u-desc{
+            .fz(12px);
+            .db;
+            white-space: pre-wrap;
+
+            sub{
+                font-size:100%;
+                .ps;
+            }
+        }
+        .u-id{
+            .fz(10px);
+            color:#555;
+            .pa;.rt(5px);
+        }
+        .u-remark{
+            .none;
+        }
+    }
+
+    #u-jx3-icon-list{
+        li{
+            list-style:none;
+            .fl;
+            margin:0 10px 5px 0;
+
+            .u-pic{
+                .pr;
+                .size(52px);
+                .db;
+                border:2px solid #eee;
+                .r(6px);
+                left:0;
+            }
+            .u-img{
+                padding:2px;
+                .size(48px);
+                .db;
+                .r(6px);
+            }
+            .u-iconid{
+                .db;.x;padding:5px 0;
+            }
+
+            .pointer;
+            &:hover i{
+                border-color:@border-hover;
+            }
+
+            &.on i{
+                border-color:@border-active;
+            }
+        }
+    }
+
+    #c-dialog-insert-jx3{
+        .none;
+    }
+
+}
+

@@ -1,0 +1,141 @@
+@import '../include/base.less';
+@import '../include/var.less';
+@import '../widget/ui.less';
+@import '../widget/icon.less';
+@import '../widget/widget.less';
+
+.m-icon-tip{
+    .x;
+    padding:0 10px;
+    .u-msg-blue;
+    .mt(10px);
+}
+@media screen and (max-width:@ipad){
+    .m-icon-tip{.none;}
+}
+
+.m-icon-list{
+    .mt(10px);
+    .clearfix;
+    li{
+        list-style:none;
+        .fl;
+        margin:0 10px 5px 0;
+
+        .u-pic{
+            .pr;
+            .size(50px);
+            .db;
+            border:1px solid #eee;
+            .r(6px);
+        }
+        .u-img{
+            padding:2px;
+            .size(48px);
+            .db;
+            .r(6px);
+        }
+        .u-love{
+            .pa;.lt(0);.size(50px);
+            background-color:rgba(255,255,255,.8);
+            .r(6px);
+            .pointer;
+            i{.db;}
+            .none;
+        }
+        .u-remove{
+            .pa;.rt(0);
+            .u-icon;.u-icon-close;
+            .size(16px);
+            .pointer;
+        }
+        &:hover{
+            .u-love{
+                .db;
+            }
+        }
+        .u-iconid{
+            .db;.x;padding:5px 0;
+        }
+    }
+}
+.m-icon-sync{
+    border:1px solid @border-active;
+    .x;
+    .w(200px);
+    .r(4px);
+    padding:5px 10px;
+    .fz(14px,2);
+    .pointer;
+    .auto(x);
+    &:hover{
+        background-color:#fafafa;
+    }
+    .none;
+}
+
+.m-emotion-nav{
+    .mt(10px);
+    list-style:none;
+    .clearfix;
+    li{
+        border:1px solid #eee;
+        .r(4px);
+        .fz(15px,30px);
+        padding:0 20px;
+        .fl;
+        .w(140px);
+        .x;
+        span{color:#777;.fz(13px);.ml(5px);}
+        .pointer;
+        .mr(10px);
+        .mb(10px);
+
+        &.active,&:hover{
+            background-color:#fafafa;
+        }
+    }
+}
+@media screen and (max-width:@ipad){
+    .m-emotion-nav{.none;}
+}
+.m-emotion-selection{
+    .u-form-text;
+    .mt(10px);
+    .none;
+}
+@media screen and (max-width:@ipad){
+    .m-emotion-selection{
+        .db;
+    }
+}
+.m-emotion-list{
+    list-style:none;
+    .clearfix;
+    li{
+        padding:10px;
+        .fl;
+    }
+}
+
+.m-emotion-down{
+    .size(180px,60px);
+    border:1px solid @border-active;
+    .r(6px);
+    .auto(x);
+    .db;
+    .x;
+    padding:8px 0;
+    b,span{
+        .db;
+    }
+    b{
+        .fz(18px);
+        color:#444;
+    }
+    span{
+        .fz(14px);
+        color:#888;
+    }
+    .mt(10px);
+}

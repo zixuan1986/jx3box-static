@@ -1,0 +1,285 @@
+@import '../include/base.less';
+@import '../include/var.less';
+@import '../widget/ui.less';
+@import '../widget/icon.less';
+@import '../widget/widget.less';
+
+.m-archive-header-meta{
+    .u-desc em{
+        color:#999;
+        margin:0 5px;
+    }
+}
+@media screen and (max-width:@ipad){
+    .m-archive-publish{
+        .none;
+    }
+}
+.p-jx3-price{
+    ul,li{
+        list-style:none;
+    }
+}
+
+@price-sidebar : 160px;
+.m-price-servers{
+    .fl;
+    .w(@price-sidebar);
+    background-color:@bg-light;
+    border:1px solid #eee;
+    .r(4px);
+    .fz(14px,2.5);
+    .clip;
+
+    a{
+        .db;
+        .pointer;
+        border-bottom:1px solid #eee;
+        padding:5px 10px 5px 25px;
+
+        .pr;
+        &:before{
+            .pa;.lt(5px,50%);
+            transform:translateY(-50%);
+            content:'';
+            background:url('@{url}app/pin.svg') no-repeat center center;
+            background-size:contain;
+
+            visibility:hidden;
+            .size(16px);
+        }
+    }
+    a:hover{
+        .bold;
+        color:@color-link;
+    }
+    .active{
+        .bold;
+        background-color:#fff;
+        color:#c00;
+
+        &:before{
+            visibility: visible;
+        }
+        &:hover{
+            color:#c00;
+            cursor: default;
+        }
+    }
+    .fav{
+        &:after{
+            content:'';
+            .u-icon;.u-icon-focus;
+            .size(14px);
+            .y(-2px);
+            .ml(2px);
+        }
+    }
+}
+@media screen and (max-width:@ipad-y){
+    .m-price-servers{
+        .w(auto);
+        float:none;
+        ul{
+            .clearfix;
+            padding:0 10px;
+        }
+        a{
+            float: left;
+            padding:5px 10px;
+        }
+        .active{
+            background:none;
+            padding-left:25px;
+        }
+    }
+}
+
+
+.m-price-content{
+    margin-left:@price-sidebar + 20px;
+}
+@media screen and (max-width:@ipad-y){
+    .m-price-content{
+        margin-left:0;
+    }
+}
+.m-price-title{
+    border-bottom:1px solid #eee;
+
+    .u-title{
+        .fz(22px,40px);
+        font-weight:300;
+    }
+    .u-star{
+        margin-left:5px;
+        display: inline-block !important;
+        vertical-align: -7px;
+        .pointer;
+        &:hover{
+            box-shadow:none !important;
+        }
+
+        .w-fav-withoutcount;
+
+        .w-star-icon{
+            .u-icon;
+            .u-icon-star-black;
+            .y(-3px);
+        }
+    }
+    .u-stat{
+        .fz(14px,46px);
+        .fr;
+        em{color:#999;margin:0 5px;}
+        b{color:#c00;/* .bold; */padding:0 2px;}
+    }
+    .u-icon-chart{
+        .size(15px);
+        .y(-3px);
+    }
+
+    a:hover{
+        .underline(@color-link);
+    }
+}
+.m-price-notice{
+    background-color:@bg-light;
+    .r(4px);
+    padding:5px 10px;
+    border:1px solid #eee;
+    margin:10px 0;
+    .fz(13px,2);
+
+    b{
+        color:#c00;
+        .bold;
+    }
+}
+.m-price-summary{
+    display:flex;
+    flex-flow: row wrap;
+    .mb(20px);
+}
+@media screen and (max-width:@ipad-y){
+    .m-price-summary{
+        .db;
+    }
+}
+.m-price-block{
+    flex:1;
+    background-color:@bg-light;
+    border:1px solid #eee;
+    .r(4px);
+    //box-shadow:1px 1px 3px #fff inset;
+    margin-right:20px;
+    padding:0 10px 10px 10px;
+
+    color:#fff;
+
+    &:first-child{
+        background-color:#337ab7;
+    }
+
+    background-color:#fd9b13;
+
+    &:last-child{
+        margin-right:0;
+        background-color:#333;
+    }
+
+    .u-title{
+        .x;
+        .fz(22px,2);
+        font-weight:300;
+        border-bottom:1px solid rgba(255,255,255,0.3);
+        padding-bottom:5px;
+        margin-bottom:5px;
+    }
+
+    .u-list{
+        .clearfix;
+        display:flex;
+        flex-flow:row wrap;
+        li{
+            flex:1;
+            .x;
+
+            margin-right:20px;
+            &:last-child{
+                margin-right:0;
+            }
+
+            *{font-weight:300;}
+
+            span{
+                .db;
+                .fz(14px);
+            }
+            strong{
+                .fz(20px);
+                font-weight:600 !important;
+            }
+            em{
+                .fz(12px);
+            }
+            b{
+                .fz(16px);
+            }
+
+            .u-lowest{
+                color:#0ef342;
+            }
+            .u-highest{
+                color:#ff0;
+            }
+        }
+    }
+    .u-total{
+        .x;
+        strong{
+            .db;
+        }
+        strong,b{
+            .fz(20px);
+            font-weight:600 !important;
+        }
+        span{
+            .fz(15px);
+        }
+    }
+}
+@media screen and (max-width:@ipad-y){
+    .m-price-block{
+        .db;
+        margin:0 0 10px 0;
+    }
+}
+.m-price-charts{
+    .u-title{
+        .fz(18px);
+        font-weight:300;
+        border-bottom:1px dotted #ddd;
+        padding-bottom:10px;
+    }
+    .mb(20px);
+    canvas{
+        background-color:#fff;
+    }
+    .u-warning{
+        .u-msg-yellow;
+        margin:20px 0;
+    }
+}
+.m-price-chart{
+    min-height:400px;
+    background:url('@{url}dashboard/loading.gif') no-repeat center center;
+}
+
+@media screen and (max-width:@ipad-y){
+    .m-app-sidebar{
+        .active{
+            padding-left:25px;
+        }
+    }
+}

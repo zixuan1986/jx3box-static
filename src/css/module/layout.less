@@ -1,0 +1,103 @@
+body{
+    font-size: 1rem;
+    padding-top:@header-height;     //顶部工具栏
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    //background-color: @bg-gray;
+    //min-width:375px;
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+}
+@media screen and (max-width:374px){
+    body{
+        font-size:0.8rem;
+    }
+}
+
+a{
+    color: @color-link;
+    text-decoration:none;
+}
+
+//包裹层
+.w-wrapper{
+    max-width:@max-content-width;
+    .auto(x);
+    padding:0 10px;
+    .clearfix;
+}
+@media screen and (max-width:@ipad){
+    .w-wrapper{
+        padding:0 20px;
+    }
+}
+
+//小包裹层
+.wp{
+    padding-left:40px;
+    padding-right:40px;
+}
+@media screen and (max-width:@ipad){
+    .wp{
+        padding-left:20px;
+        padding-right:20px;
+    }
+}
+
+//双栏布局
+.c-sidebar{
+    .pf;.lt(0);.z(1);
+    .w(@sidebar-width);.h(100%);
+}
+.p-sidebar{
+    padding-left:@sidebar-width;
+}
+@media screen and (max-width:@notebook){   //笔记本用户
+    .c-sidebar{
+        .w(@sidebar-width - 80px);
+    }
+    .p-sidebar{
+        padding-left:@sidebar-width - 80px;    //侧边菜单栏
+    }
+}
+@media screen and (max-width:@ipad){  //低于平板横屏
+    .c-sidebar{
+        .none;
+        .ps;.w(auto); //.h(100px);
+    }
+    .p-sidebar{
+        padding-left:0;    //侧边菜单栏
+    }
+}
+
+//头部
+.m-header{
+    background-color: #fafbfc;
+    padding-top:24px;
+    padding-bottom:24px;
+    border-bottom:1px solid @border-hr;
+}
+
+
+/* .p-main{
+    padding:40px;
+    max-width:@max-content-width;
+    .auto(x);
+
+    .entry-title{
+        .fz(32px);
+        .x;
+        a{.color(@bg-black);}
+        .mb(40px);
+    }
+}
+@media screen and (max-width:@ipad){
+    .p-main{
+        padding:20px;
+
+        .c-content .entry-title{
+            .mb(20px);
+            .fz(1.2rem);.bold(400);
+        }
+    }
+} */

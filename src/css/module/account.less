@@ -1,0 +1,70 @@
+//登录注册页
+.m-account-logo{
+    .mb(40px);
+}
+
+.p-account{
+
+    padding:40px 0;
+
+    .c-passport{
+        .clearfix;
+        margin-bottom:20px;
+
+        a{
+            .fl;.w(30%);
+            margin-right:20px;
+            padding:5px 5px 5px 8px;
+            border:1px solid #ddd;
+            box-shadow:none;
+            background-color: #fff;
+            .color(#333,#222);
+            .r(3px);
+            transition:0.2 ease-in-out;
+
+            background-color: @bg-light;
+            &:hover{
+                box-shadow:0 0 2px rgba(0,0,0,.1);
+            }
+            //box-shadow:1px 1px 2px rgba(0,0,0,.3);
+            //.x;
+            img{
+                .dbi;.y;.size(32px);
+                margin-right:8px;
+            }
+            &:after{
+                //content:'';
+                .fz(0.9rem,@logo-size);
+            }
+            &.qq:after{
+                content:'QQ登录注册';
+            }
+            &.weibo::after{
+                content:'微博登录注册';
+            }
+        }
+
+    }
+
+    .btn-primary{
+        .u-btn-publish;
+        .w(120px);
+        .lh(26px);
+    }
+
+}
+
+@media screen and (max-width:@ipad){
+    .p-account{
+        padding:20px 0;
+        .m-account-logo{
+            .none;
+        }
+    }
+    .p-account .c-passport a.qq:after{
+        content:"QQ"
+    }
+    .p-account .c-passport a.weibo:after{
+        content:"微博"
+    }
+}

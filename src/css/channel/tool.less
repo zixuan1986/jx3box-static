@@ -1,0 +1,76 @@
+@import '../include/base.less';
+@import '../include/var.less';
+@import '../widget/ui.less';
+@import '../widget/icon.less';
+
+
+//列表
+#m-tool-nav{
+    li a:after{
+        color:#999;
+        .ml(5px);
+    }
+    li:nth-child(1){
+        a:after{content:'Tutorial';}
+    }
+    li:nth-child(2){
+        a:after{content:'Tool';}
+    }
+    li:nth-child(3){
+        a:after{content:'Resource';}
+    }
+    li:nth-child(4){
+        a:after{content:'Other';}
+    }
+}
+@media screen and (max-width:@ipad){
+    #m-tool-nav{
+        margin-top:-10px;
+    }
+}
+.m-tool-list-item-types{
+    .u-pve{background-color: #b8f1ed;}
+    .u-pvp{background-color: #b8f1cc;}
+    .u-pvx{background-color: #f1f1b8;}
+    .u-macro{background-color: #f1b8e4;}
+    .u-plugin{background-color: #d9b8f1;}
+    .u-fb{background-color: #c1d4fe;}
+    .u-bps{background-color: #fcd3e2;}
+    .u-custom{background-color:#f1ccb8 ;}
+}
+
+//列表
+.m-tool-list{
+    .u-sub-block{
+        .pr;
+    }
+    .u-down{
+        .pa;.rb(0);
+    }
+    .u-desc{
+        .mr(100px);
+    }
+}
+@media screen and (max-width:@ipad){
+    .m-tool-list{
+        .u-down{
+            .none;
+        }
+        .u-desc{
+            .mr(0);
+        }
+    }
+}
+
+//单页
+.m-single-tool{
+    .m-tool-list-item-types{
+        b{
+            .dbi;.y(top);
+            padding:0 10px;
+            .fz(14px,26px);
+            .r(2px);
+            margin: 3px 5px 3px 0;
+        }
+    }
+}

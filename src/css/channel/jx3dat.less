@@ -1,0 +1,196 @@
+@import '../include/base.less';
+@import '../include/var.less';
+@import '../widget/ui.less';
+@import '../widget/icon.less';
+
+.c-jx3dat-types{
+    .u-pve{background-color: #b8f1ed;}
+    .u-pvp{background-color: #b8f1cc;}
+    .u-horse{background-color: #f1f1b8;}
+    .u-pet{background-color: #f1b8e4;}
+    .u-qiyu{background-color: #d9b8f1;}
+    .u-custom{background-color: #f1ccb8;}
+}
+
+
+//单页
+//================================
+.m-single-jx3dat{
+    .u-type-list{
+        b{
+            .dbi;.y(top);
+            .mr(10px);
+            padding:0 10px;.r(2px);
+            cursor: default;
+            color:#444;
+            .fz(14px,26px);
+            margin:3px 5px 3px 0;
+        }
+    }
+}
+
+
+//列表
+//================================
+.m-sidebar-minitools{
+    .mb(10px);
+}
+.m-jx3dat-list{
+
+    .u-types{
+        //.mb(5px);
+    }
+
+    .u-feed,.u-data-type{
+        .db;.nobreak;
+        .fz(13px,28px);
+        color:#555;
+        i{.size(13px);.y(-1px);.mr(3px);}
+        em{color:#666;margin-right:10px;}
+        strong{.fz(14px);.bold;color:@bg-black;}
+    }
+
+    .u-down{
+        .pa;.rt(0);
+    }
+}
+
+@media screen and (max-width:@ipad){
+    .m-jx3dat-nav .u-list-primary{
+        margin-top:-10px;
+    }
+}
+
+//团监数据列表时、显示订阅号
+.m-jx3dat-feedlist{
+    
+    ul{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+    li{
+        //.fl;
+        //.w(25%);
+        list-style:none;
+        //.mr(20px);
+        //.mb(20px);
+        background-color:@bg-light;
+        .r(4px);
+        border:1px solid #eee;
+        padding:20px 10px;
+
+        &:hover{
+            border-color:@border-active;
+        }
+    } 
+    .u-avatar{
+        .db;
+        img{
+            .r(68px);.db;.auto(x);
+            //border:1px solid #eee;
+        }
+        .mb(5px);
+
+        .pr;
+        &:after{
+            .pa;.lt(50%,-5px);transform: translateX(-50%);
+            .size(78px);
+            content:'';
+            .db;
+            background:url('@{url}frame/flower1.png') no-repeat 0 0;
+            //background:url('@{url}frame/leaf2.png') no-repeat 0 0;
+            background-size:100% 100%;
+            .tm(0);
+            transition:0.4s ease;
+        }
+    }
+    li:hover{
+        .u-avatar:after{
+            .tm(1);
+        }
+    }
+    .u-feed{
+        .db;
+        .bold;
+        .x;
+        .fz(18px,28px);
+
+        &.isLong{
+            .fz(14px,28px);
+        }
+        &.isVeryLong{
+            .fz(12px,28px);
+        }
+        word-break: break-all;
+    }
+    .u-title{
+        .x;
+        .fz(12px);
+        .db;
+        &:hover{
+            color:#c00;
+        }
+        .nobreak;
+        max-width:207px;
+        .none;
+    }
+    .u-author{
+        .db;
+        color:#666;
+        .fz(12px,22px);
+        .x;
+        .u-icon{
+            /* .size(14px);
+            .y(-2px);
+            .tm(0.6); */
+        }
+        /* &:hover{
+            color:@color-link;
+        } */
+    }
+    .u-update{
+        .db;
+        .fz(12px);
+        color:#888;
+        .x;
+        .u-icon{
+            .size(12px);
+            .mr(3px);
+            .y(-2px);
+        }
+    }
+}
+.m-jx3dat-feedlist-loading{
+    .u-icon-loading{
+        background:url('@{url}dashboard/loading.gif') no-repeat center center;
+        background-size:100% 100%;
+        .size(32px);
+        .db;.auto(x);
+        .mb(20px);
+    }
+    .u-txt{
+        color:#666;
+        .x;
+        padding:10px 0;
+        .db;
+        .fz(13px);
+    }
+    padding:100px 0;
+}
+.m-jx3data-feedlist-error{
+    .x;
+    .u-msg-red;
+    .none;
+}
+
+@media screen and (max-width:@phone){
+    .m-jx3dat-feedlist{
+        ul{
+            .db;
+        }
+        li{
+            .mb(20px);
+        }
+    }
+}
