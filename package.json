@@ -5,6 +5,7 @@
     "@babel/preset-env": "^7.8.7",
     "@babel/runtime": "^7.8.7",
     "babel-loader": "^8.0.6",
+    "babel-minify-webpack-plugin": "^0.3.1",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -38,6 +39,7 @@
     "axios": "^0.19.0",
     "cheerio": "^1.0.0-rc.3",
     "dom-to-image": "^2.6.0",
+    "gulp-cli": "^2.2.0",
     "html2canvas": "^1.0.0-rc.5",
     "kaci": "^1.0.0",
     "lazyload": "^2.0.0-rc.2",
@@ -50,7 +52,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "scripts": {
-    "start": "gulp start",
-    "build": "gulp build"
+    "serve": "npx gulp start",
+    "build": "npx gulp build"
   }
 }

@@ -2,10 +2,11 @@
 即将分离，临时大杂烩  
 
 ## 环境
-@启动：`gulp start`  
+@启动：`npm run serve`  
+@构建：`npm run build`  
 @部署：阿里云OSS  
 @域名：https://static.jx3box.com/css|js    
-@本地HOST：绑定localserver目录为static.jx3box.com
+@本地HOST：绑定 **dist** 目录为static.jx3box.com
 
 ## 说明
 推送后自动构建至oss
