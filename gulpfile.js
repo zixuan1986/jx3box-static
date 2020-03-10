@@ -40,7 +40,7 @@ function LoadFiles(source, glob, ignore) {
     //编译模板
     let source_stream = gulp.src(
         [path.join(source, glob), ...ignore_files], 
-        {cwd: sourceRoot,resolveSymlinks: false}
+        {cwd: sourceRoot}
     );
 
     return source_stream;
@@ -96,7 +96,7 @@ gulp.task('css',function(done) {
         .pipe(autoprefixer(SCHEME.css.autoprefixer))
         .pipe(gulpif(SCHEME.css.compress, cleancss(SCHEME.css.clean)))
         .pipe(remember("less"))
-        .pipe(gulp.dest(path.join(SCHEME.path)));   //,CONF.source.css
+        .pipe(gulp.dest(path.join(SCHEME.path,CONF.source.css)));
     }
 
     LoadFiles(CONF.source.css,"**/*.css",[])    //css文件不进行忽略，也不进行编译
@@ -105,7 +105,7 @@ gulp.task('css',function(done) {
         .pipe(autoprefixer(SCHEME.css.autoprefixer))
         .pipe(gulpif(SCHEME.css.compress, cleancss(SCHEME.css.clean)))
         .pipe(remember("csss"))
-        .pipe(gulp.dest(path.join(SCHEME.path))); //,CONF.source.css
+        .pipe(gulp.dest(path.join(SCHEME.path,CONF.source.css)));
 
     done();
 })
@@ -123,7 +123,7 @@ gulp.task('js',function(done) {
 
     //独立处理lib文件，lib文件不再压缩，否则可能出现2次压缩问题
     LoadFiles(CONF.source.jslib,"**/*",SCHEME.js.ignore)
-        .pipe(gulp.dest(path.join(SCHEME.path)))    //,CONF.source.jslib
+        .pipe(gulp.dest(path.join(SCHEME.path,CONF.source.jslib)))
 
     //使用webpack打包时
     if (SCHEME.js.webpack) {
