@@ -1,5 +1,5 @@
 import param from '../utils/param.js'
-import JX3BOX from "../module/var";
+const {JX3BOX} = require('@jx3box/jx3box-common');
 
 jQuery(function ($) {
 
