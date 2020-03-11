@@ -39,11 +39,12 @@ gulp.task("css", function(done) {
 //javascript task
 //----------------------------------
 const webpack = require("webpack");
+const webpack_config = require('./webpack.config.js');
 
 gulp.task("js", function(done) {
     //独立处理lib文件，lib文件不再压缩，否则可能出现2次压缩问题
     gulp.src("./src/js/lib/**/*.js").pipe(gulp.dest("./dist/js/lib/"));
-    webpack().run();
+    webpack(webpack_config).run();
 
     done();
 });
