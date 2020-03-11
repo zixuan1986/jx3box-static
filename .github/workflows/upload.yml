@@ -33,5 +33,5 @@ jobs:
           endpoint: "oss-cn-hangzhou.aliyuncs.com"
           access-key-id: ${{secrets.AccessKey_ID}}
           access-key-secret: ${{secrets.Access_Key_Secret}}
-      - run: ossutil cp -rf dist/css oss://jx3box/css/
-      - run: ossutil cp -rf dist/js oss://jx3box/js/
+      - run: ossutil cp -rf dist/css oss://jx3box-static/css/
+      - run: ossutil cp -rf dist/js oss://jx3box-static/js/
