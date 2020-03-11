@@ -9,7 +9,7 @@
 @本地HOST：绑定 **dist** 目录为static.jx3box.com
 
 ## 说明
-推送后自动构建至oss
+推送后自动构建至oss/jx3box-static
 
 ## 注意
 本地环境需配置允许跨域
