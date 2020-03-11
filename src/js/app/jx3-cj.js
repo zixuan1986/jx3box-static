@@ -73,6 +73,8 @@ jQuery(function ($) {
                                         <span>评论</span>
                                     </h4>
                                 `).append(output_comments(post.comments));
+                        } else {
+                            $('#m-cj-comments').remove();
                         }
                     },
                     error: function () {
