@@ -1,5 +1,5 @@
 import param from '../utils/param.js'
-const {JX3BOX} = require('@jx3box/jx3box-common');
+import ua from '../utils/ua.js'
 
 jQuery(function ($) {
 
@@ -83,7 +83,9 @@ jQuery(function ($) {
                 });
             //}
 
-            check_img_load()
+            check_img_load();
+
+            ua();
 
             //统计
             $.ajax({
@@ -92,7 +94,8 @@ jQuery(function ($) {
                 data:{
                     cjid : cj_id,
                     pid : post.id,
-                    title : post.title
+                    title : post.title,
+                    ua:JSON.stringify(window._ua)
                 },
                 success:function (data){
                     // console.log(data)
