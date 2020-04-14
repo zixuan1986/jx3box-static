@@ -1,23 +1,28 @@
 # Static 
 
-## 环境
-@启动：`npm run serve`  
-@构建：`npm run build`  
-@本地HOST：绑定 **dist** 目录为static.jx3box.com
+## 构建
+@启动：`npm run serve`   
+@构建：`npm run build`   
 
-## 线上
+## 存档
 @部署 : github master  
-@镜像 : https://cdn.jsdelivr.net/gh/iRuxu/jx3box-static@$commit/dist/css|js
+@备份 : //OSS/jx3box/static/wp_static/  (push后自动推送)
 
-## 备用
-@部署 : 阿里云OSS  
-@域名 : https://static.jx3box.com/js|css
+## 访问
+@源站 : https://static.jx3box.com/dist/   
+@加速 : https://cdn.jsdelivr.net/gh/iRuxu/jx3box-static@$commit/dist/
 
-## 说明
-推送后自动构建至//oss/jx3box-static
+## 测试
++ https://static.jx3box.com/dist/js/index.js
++ https://cdn.jsdelivr.net/gh/iRuxu/jx3box-static@4121ae8/dist/js/index.js
 
-## 注意
-本地环境需配置允许跨域
+## 本地开发环境
+1.本地HOST：绑定 **dist** 目录为static.jx3box.com  
+2.指定CONFIG文件中`STATIC_ENV`
++ 本地指定为`DEV`
++ 线上指定为`PROD`
+
+3.本地环境需配置允许跨域
 ```
 location / {  
     add_header Access-Control-Allow-Origin *;
