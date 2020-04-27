@@ -210,12 +210,11 @@ jQuery(function($) {
         }
     });
 });
-console.log(1111);
 function loadResource(vm, opt) {
     return new Promise((resolve, reject) => {
         axios
             .get(
-                JX3BOX.__node + `/${opt.type}/${opt.condition}/` + opt.query
+                JX3BOX.__node + `${opt.type}/${opt.condition}/` + opt.query
             )
             .then(res => {
 

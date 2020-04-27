@@ -217,7 +217,7 @@ new Vue({
         },
         queryAdvNPC : function (){
             let query = this.search.advnpc
-            axios.get(JX3BOX.__node + `/npc/map/` + query).then((res) => {
+            axios.get(JX3BOX.__node + `npc/map/` + query).then((res) => {
                 this.result['advnpc'] = res.data
                 this.nullflag['advnpc'] = res.data.length ? false : true
             })
