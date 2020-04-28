@@ -2,7 +2,7 @@
 @import 'include/base.less';
 @import 'include/var.less';
 
-
+@mceimg : 'https://mirror.jx3box.com/wp-includes/js/tinymce/skins/wordpress/images/';
 html {
 	cursor: text;
 }
@@ -102,11 +102,11 @@ img[data-mce-selected]::selection {
 }
 
 .mce-content-body img[data-wp-more="more"] {
-	background: transparent url( images/more.png ) repeat-y scroll center center;
+	background: transparent url("@{mceimg}more.png" ) repeat-y scroll center center;
 }
 
 .mce-content-body img[data-wp-more="nextpage"] {
-	background: transparent url( images/pagebreak.png ) repeat-y scroll center center;
+	background: transparent url("@{mceimg}pagebreak.png" ) repeat-y scroll center center;
 }
 
 /* Styles for formatting the boundaries of anchors and code elements */
@@ -149,7 +149,7 @@ img[data-mce-selected]::selection {
 }
 
 .mce-content-body img.wp-media.wp-gallery {
-	background-image: url(images/gallery.png);
+	background-image: url("@{mceimg}gallery.png");
 }
 
 /* Image resize handles */
@@ -409,7 +409,7 @@ p.wp-policy-help {
 
 img.wp-oembed {
 	border: 1px dashed #888;
-	background: #f7f5f2 url(images/embedded.png) no-repeat scroll center center;
+	background: #f7f5f2 url("@{mceimg}embedded.png") no-repeat scroll center center;
 	width: 300px;
 	height: 250px;
 	outline: 0;
@@ -426,12 +426,12 @@ img.wp-oembed {
 	(min-resolution: 120dpi) {
 
 	.mce-content-body img.mce-wp-more {
-		background-image: url( images/more-2x.png );
+		background-image: url("@{mceimg}more-2x.png" );
 		background-size: 1900px 20px;
 	}
 
 	.mce-content-body img.mce-wp-nextpage {
-		background-image: url( images/pagebreak-2x.png );
+		background-image: url("@{mceimg}pagebreak-2x.png" );
 		background-size: 1900px 20px;
 	}
 }
